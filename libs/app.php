@@ -14,7 +14,7 @@ class App{
 
         //Si la url viene sin parámetros, carga el controller por defecto
         if(empty($url[0])){
-            $fileController = 'controller/login.php';
+            $fileController = 'controllers/login.php';
             require_once $fileController;
             $controller = new Login();
             $controller->loadModel('login');
