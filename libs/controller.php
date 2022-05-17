@@ -9,7 +9,7 @@ class Controller{
     //Función que nos permitirá cargar el modelo que queramos
     //Toma el nombre del modelo a cargar de la url, y si ese modelo exise, lo instancia
     function loadModel($model){
-        $url = 'models/' . $model . 'model.php';
+        $url = 'models/' . $model . 'Model.php';
 
         if(file_exists($url)){
             require_once $url;

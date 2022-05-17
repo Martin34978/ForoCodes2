@@ -14,16 +14,16 @@ class App{
 
         //Si la url viene sin parámetros, carga el controller por defecto
         if(empty($url[0])){
-            $fileController = 'controllers/login.php';
+            $fileController = 'controllers/categories.php';
             require_once $fileController;
-            $controller = new Login();
-            $controller->loadModel('login');
+            $controller = new Categories();
+            $controller->loadModel('categories');
             $controller->render();
             return false;
         }
 
         //Si viene con parámetros, necesitamos coger esa string para pasarselo al controlador
-        $fileController = 'controllers/' . url[0] . '.php';
+        $fileController = 'controllers/' . $url[0] . '.php';
 
         if(file_exists($fileController)){
             require_once $fileController;
